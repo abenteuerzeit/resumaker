@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Data</title>
+</head>
+<body>
+    <form hx-post="/create" hx-target="#dataList" hx-swap="innerHTML" hx-boost="true" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <button type="submit">Create</button>
+
+    </form>
+
+    <div id="dataList">
+        <%- include('partials/dataList') %> 
+    </div>
+      <script src="https://unpkg.com/htmx.org@latest">
+        htmx.config.includeIndicatorStyles = false;
+        htmx.config.logging = true;
+        htmx.config.refreshOnHistoryMiss = true;
+      </script>
+      </body>
+</html>

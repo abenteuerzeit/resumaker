@@ -1,0 +1,13 @@
+<!-- dataList.ejs -->
+<% data.forEach(person => { %>
+    <div>
+        <h2><%= person.name %></h2>
+
+        <form hx-put="/update/<%= person._id %>" hx-target="#dataList" hx-swap="innerHTML" hx-boost="true" method="post">
+            <input type="text" name="name" value="<%= person.name %>" placeholder="Name">
+            <button type="submit">Update</button>
+        </form>
+
+        <button hx-delete="/delete/<%= person._id %>" hx-target="#dataList" hx-swap="innerHTML" hx-boost="true">Delete</button>
+    </div>
+<% }); %>
