@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsnd --respawn --cls index.ts"
   },
